@@ -14,6 +14,19 @@ Raw GBIF Data → PostgreSQL ETL → Cleaned Dataset → Feature Engineering →
 
 ---
 
+## 🌍 Data Source
+
+The dataset consists of amphibian occurrence records downloaded from GBIF.
+
+- **Raw dataset size:** ~211 MB  
+- **Number of records after processing:** 399,333  
+- **Final format:** PostgreSQL relational tables  
+
+> ⚠️ The raw dataset and final CSV are not included in this repository due to size constraints and reproducibility considerations.  
+> The full pipeline is fully reproducible using the SQL scripts provided.
+
+---
+
 ## ⚙️ ETL Process (SQL)
 
 The following transformations were performed in PostgreSQL:
@@ -61,6 +74,20 @@ Derived variables:
 
 ---
 
+## 🔁 Reproducibility
+
+To reproduce the pipeline:
+
+1. Load raw GBIF occurrence data into PostgreSQL
+2. Execute the `gbif_etl.sql` script step-by-step
+3. Generate the `gbif_clean` table
+4. Run column profiling diagnostics (`column_profile`)
+5. Derive the final analytical dataset
+
+No external preprocessing steps are required.
+
+---
+
 ## 🧰 Technologies Used
 
 - PostgreSQL
@@ -68,10 +95,39 @@ Derived variables:
 - DBeaver
 - GBIF API / dataset
 
-Future additions:
-- Python (pandas, seaborn, matplotlib)
-- Statistical analysis
-- Data visualization
+---
+
+---
+
+## 📈 Key Analytical Capabilities
+
+This pipeline enables downstream analyses such as:
+
+- Temporal trends in biodiversity sampling
+- Seasonal patterns of amphibian occurrence records
+- Institutional bias in biodiversity data collection
+- Geographic standardization of Brazilian states
+- Large-scale biodiversity data quality assessment
+
+---
+
+## 🧠 Design Principles
+
+This project emphasizes:
+
+- Full transparency in data transformation
+- Reproducible SQL-based workflows
+- Explicit handling of missing and inconsistent data
+- Scalable relational data engineering practices
+
+---
+
+## 🚀 Next Steps (Planned Extensions)
+
+- Python-based exploratory data analysis (EDA)
+- Statistical modeling of temporal and spatial patterns
+- Visualization dashboard (Matplotlib / Seaborn / Plotly)
+- Integration with biodiversity metadata APIs
 
 ---
 
