@@ -129,6 +129,4 @@ This project emphasizes:
 - Visualization dashboard (Matplotlib / Seaborn / Plotly)
 - Integration with biodiversity metadata APIs
 
----
 
-## 📁 Repository Structure
